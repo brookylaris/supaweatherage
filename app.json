@@ -17,7 +17,7 @@
       "description": "Google developers project API key",
       "required": false
     }
-    "STATUS": {
+    "MY_VARS_STATUS": "Larissa's Exec | State City" {
         "description": "Set a custom playing status for the bot.",
         "required": false
     },
