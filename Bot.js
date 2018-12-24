@@ -41,7 +41,7 @@ var commands = {
 };
   async def on_connect(self):
         print('---------------')
-        print('Modmail connected!')
+        print('Larissas Exec')
         self.session = aiohttp.ClientSession()
         status = os.getenv('STATUS') or self.config.get('STATUS')
         if status:
