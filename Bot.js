@@ -39,6 +39,16 @@ var commands = {
     description: 'get the current song'
   }
 };
+  async def on_connect(self):
+        print('---------------')
+        print('Modmail connected!')
+        self.session = aiohttp.ClientSession()
+        status = os.getenv('STATUS') or self.config.get('STATUS')
+        if status:
+            print(f'Setting Status to {status}')
+            await self.change_presence(activity=discord.Game(status))
+        else:
+            print('No status set.')
 
 Bot.on('message', message => {
   WordService.registerMessage(message);
