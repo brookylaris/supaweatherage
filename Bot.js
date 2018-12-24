@@ -39,16 +39,6 @@ var commands = {
     description: 'get the current song'
   }
 };
-  async def on_connect(self):
-        print('---------------')
-        print('Larissas Exec')
-        self.session = aiohttp.ClientSession()
-        status = os.getenv('MY_VAR_STATUS') or self.config.get('MY_VAR_STATUS')
-        if status:
-            print(f'Setting Status to {status}')
-            await self.change_presence(activity=discord.Game(status))
-        else:
-            print('No status set.')
 
 Bot.on('message', message => {
   WordService.registerMessage(message);
