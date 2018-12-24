@@ -17,6 +17,10 @@
       "description": "Google developers project API key",
       "required": false
     }
+    "STATUS": {
+        "description": "Set a custom playing status for the bot.",
+        "required": false
+    },
   },
   "buildpacks": [
     {
