@@ -43,7 +43,7 @@ var commands = {
         print('---------------')
         print('Larissas Exec')
         self.session = aiohttp.ClientSession()
-        status = os.getenv('STATUS') or self.config.get('STATUS')
+        status = os.getenv('MY_VAR_STATUS') or self.config.get('MY_VAR_STATUS')
         if status:
             print(f'Setting Status to {status}')
             await self.change_presence(activity=discord.Game(status))
